@@ -682,8 +682,7 @@ $(document).ready(function(){
 
 <input type="button"
        id="bf_print_2026-27"
-       name="bf"
-       class="btn btn-success Receipt"
+       class="btn btn-success"
        value="Print Receipt">
 															</td>
 						</tr>
@@ -932,6 +931,21 @@ studying V B.Tech (Computer Science and Engineering) in this Institution.<br><br
 	
 	
   $.widget.bridge('uibutton', $.ui.button)
+
+		$('#bf_print_2026-27').click(function () {
+
+    $('#fheader').html('Bus Fee');
+    $('#recfor').html('BUS FEE');
+
+    $('#trackid').html($('#bf_trackid_2026-27').val());
+    $('#pdate').html($('#bf_payment_date_2026-27').val());
+    $('#amount').html($('#bf_paid_amount_2026-27').val());
+    $('#ay').html($('#bf_ay_2026-27').val());
+    $('#amountwords').html($('#bf_paid_amount_words_2026-27').val());
+
+    $('#modal-print_receipt').modal('show');
+
+});
 </script>
 
 </body></html>
